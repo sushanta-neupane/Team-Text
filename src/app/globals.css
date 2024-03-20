@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+  ul{
+    @apply list-disc
+  }
+  ol{
+    @apply list-decimal
+  }
+}
+
+
+
+
+body {
+  @apply dark:bg-zinc-900 m-0 p-0 bg-zinc-50 dark:text-white text-zinc-900 ;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.isActive{
+  @apply  text-blue-700 
+}
+
+ul,
+ol {
+  padding: 0 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+
+
+
+
+
+.quill, .ql-editor , .ql-container,.board{
+
+  @apply !border-none !rounded-md ;
+
+}
+
+.board {
+  @apply   w-full md:w-1/2;
+}
+
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  @apply dark:text-zinc-500 text-zinc-800 font-mono not-italic ;
+  content: 'Type something...';
+
+}
+
+
+
+
+
+#toolbar{
+  @apply dark:!text-zinc-300 !text-zinc-900 !border-none  rounded-md mx-auto md:flex justify-center items-center flex-wrap ;
+}
+
+
+.toolkit{
+  @apply w-full my-12 md:my-5   dark:bg-zinc-600/20     ;
+}
+
+.qlBtn :hover{
+ @apply !text-zinc-300 bg-zinc-900/20 rounded-md  ;
+}
+
+.qlBtn {
+  width: 32px; /* Adjust button width */
+  height: 32px; /* Adjust button height */
+  margin-bottom: 8px; /* Adjust margin between buttons */
+}
+
+.ql-active {
+  @apply !text-blue-700;
+}
+.ql-picker {
+  @apply dark:!text-zinc-400/30 !text-zinc-900 ;
+}
+
+
+.ql-picker-options{
+  @apply dark:!bg-zinc-600/30 !bg-zinc-50 !backdrop-blur-xl !rounded-md !border-none !outline-none;
+}
+
